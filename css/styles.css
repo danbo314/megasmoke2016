@@ -1,0 +1,14 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: black;
+}
+
+#hoff {
+    height: 100%;
+    width: 100%;
+    cursor: url("../img/hoff.cur"), auto;
+    color: white;
+}
