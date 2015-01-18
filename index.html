@@ -1,9 +1,35 @@
 <!DOCTYPE HTML>
 
 <head>
+    <link href='http://fonts.googleapis.com/css?family=Armata|Allerta+Stencil' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/styles.css" type="text/css"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/mousetrap.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $.stellar({
+                horizontalScrolling: false,
+                verticalOffset: 40
+            });
+
+            Mousetrap.bind('ctrl+alt+h o f f', function() {
+                $("body").css({ cursor: "url('../img/hoff.cur'), auto" });
+            });
+
+            $(".pimg").height($(window).height());
+        });
+    </script>
 </head>
 
 <body>
-    <div id="hoff">TEST</div>
+    <div class='pimg' id='mainBG' data-stellar-background-ratio='0.5'>
+        <div id="banner">Megasmoke</div>
+        <div id="bannerDates">March 17-20, 2016</div>
+    </div>
+    <div class='scrollPanel' data-stellar-background-ratio='1'>Test</div>
+    <div class='pimg' id='secBG' data-stellar-background-ratio='0.5'></div>
+    <div class='scrollPanel' data-stellar-background-ratio='1'></div>
+    <div class='pimg' id='thrBG' data-stellar-background-ratio='0.5'></div>
 </body>
