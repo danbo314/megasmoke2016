@@ -6,6 +6,10 @@ body, html {
     font-family: 'Armata', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 .pimg {
     width: 100%;
     background-size: cover;
@@ -19,10 +23,11 @@ body, html {
     height: 200px;
     background-color: rgba(220,180,57,.9);
     color: #002b5b;
+    position: relative;
 }
 
 #mainBG {
-    padding-top: 40px;
+    padding-top: 60px;
     background-image: url("../img/streetsmoke13.jpg");
 }
 
@@ -33,23 +38,117 @@ body, html {
     padding: 20px;
     margin: 0 auto 0 auto;
     color: white;
-    background-color: rgba(220,180,57,.9);
+    background-color: rgb(0,151,68);
     text-transform: uppercase;
 }
 
 #bannerDates {
     font-size: 20px;
-    width: 184px;
+    width: 187px;
     padding: 10px;
     margin: 10px auto 0 auto;
     color: white;
-    background-color: rgba(220,180,57,.9);
+    background-color: rgb(2,43,91);
 }
 
 #secBG {
-    background-image: url("");
+
 }
 
 #thrBG {
-    background-image: url("");
+    background-image: url("../img/P1020550.JPG");
+    background-position: center 1450px;
+}
+
+.spContent {
+    width: 800px;
+    margin: 0 auto 0 auto;
+    padding: 20px;
+    font-size: 20px;
+}
+
+#signUp {
+    float: right;
+    width: 400px;
+    height: 516px;
+}
+
+#logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 100px;
+    width: 100px;
+}
+
+#itinerary {
+    width: 400px;
+    float: left;
+}
+
+#bottomContainer {
+    width: 900px;
+    position:absolute;
+    left:0;
+    right:0;
+    bottom: 100px;
+    margin: 0 auto 0 auto;
+}
+
+#bottomContainer > div {
+    padding: 20px;
+    background: rgba(255,255,255,.75);
+}
+
+#bottomContainer h1 {
+    margin: 0 0 20px 0;
+    font-family: 'Allerta Stencil', sans-serif;
+    text-align: center;
+}
+
+#bottomContainer h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+#itinerary i {
+    color: #009b48;
+}
+
+#signUp .button {
+    width: 150px;
+    padding: 5px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Allerta Stencil', sans-serif;
+    border-radius: 3px;
+    color: #dcb439;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+#signUp p {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#register {
+    background: #002b5b;
+    margin-top: 90px !important;
+}
+
+#register:hover {
+    background: #dcb439;
+    color: #002b5b;
+}
+
+#guestList {
+    background: #009b48;
+    margin-top: 50px !important;
+}
+
+#guestList:hover {
+    background: #dcb439;
+    color: #009b48;
 }

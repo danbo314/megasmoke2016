@@ -19,17 +19,69 @@
             });
 
             $(".pimg").height($(window).height());
+
+            $(window).resize(function () {
+                $(".pimg").height($(window).height());
+            });
+
+            var oldT;
+
+            $("#signUp .button").hover(function () {
+                oldT = $(this).text();
+                $(this).text("Coming Soon");
+            },
+            function () {
+                $(this).text(oldT);
+            });
         });
     </script>
 </head>
 
 <body>
     <div class='pimg' id='mainBG' data-stellar-background-ratio='0.5'>
+        <img id="logo" src="img/logo.jpg"/>
         <div id="banner">Megasmoke</div>
-        <div id="bannerDates">March 17-20, 2016</div>
+        <div id="bannerDates">March 16-20, 2016</div>
     </div>
-    <div class='scrollPanel' data-stellar-background-ratio='1'>Test</div>
-    <div class='pimg' id='secBG' data-stellar-background-ratio='0.5'></div>
-    <div class='scrollPanel' data-stellar-background-ratio='1'></div>
-    <div class='pimg' id='thrBG' data-stellar-background-ratio='0.5'></div>
+    <div class='scrollPanel'>
+        <div class="spContent">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Welcome to the official hype page for ND Ultimate's MEGASMOKE 2016!&nbsp;&nbsp;
+            We hope that many of you will be able to join us for what we hope will be the biggest reunion in ND Ultimate history!&nbsp;&nbsp;
+            Please take some time to browse through this site, register for Megasmoke, and check out all the cool features we are working on to make this Streetsmoke bigger and better than any other you've ever been to.
+        </div>
+    </div>
+    <div class='pimg' id='secBG' data-stellar-background-ratio='0.5'>
+        <iframe width="100%" height="100%" src="//www.youtube.com/embed/NQFyzCmrXis" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class='pimg' id='thrBG' data-stellar-background-ratio='0.5'>
+        <div id="bottomContainer">
+            <div id="itinerary">
+                <h1>Itinerary</h1>
+                <h2>Wednesday (3/16)</h2>
+                <ul><li>Quarter Dawg Challenge <i>Lafortune</i></li></ul>
+                <h2>Thursday (3/17)</h2>
+                <ul><li>McCormick's</li></ul>
+                <h2>Friday (3/18)</h2>
+                <ul>
+                    <li>Frolf <i>Campus</i></li>
+                    <li>Potawatomi Zoo</li>
+                    <li>Reception &amp; Dinner <i>Doubletree</i></li>
+                </ul>
+                <h2>Saturday (3/19)</h2>
+                <ul>
+                    <li>Hat Tournament <i>Boehm Park</i></li>
+                    <li>Rage/Age &amp; Womb/Tomb <i>Boehm Park</i></li>
+                </ul>
+                <h2>Sunday (3/20)</h2>
+                <ul><li>Brunch <i>South Dining Hall</i></li></ul>
+            </div>
+            <div id="signUp">
+                <!--<a href="html/register.html">--><div class="button" id="register">Sign Up</div><!--</a>-->
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign up to attend Megasmoke 2016.  It'll only take a few short moments: a quick survey and a couple of logistical questions.</p>
+                <!--<a href="html/guests.html">--><div class="button" id="guestList">Guest List</div><!--</a>-->
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Check out who else is making it out to Megasmoke 2016 and heckle your friends who haven't signed up yet!</p>
+            </div>
+        </div>
+    </div>
 </body>
