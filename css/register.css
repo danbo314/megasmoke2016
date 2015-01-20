@@ -10,3 +10,26 @@
     /* hide the images until the plugin has run. the plugin will reveal the images*/
     opacity:0;
 }
+
+#regPanel {
+    position:absolute;
+    left:0;
+    right:0;
+    top: 80px;
+    margin: 0 auto 0 auto;
+    width: 800px;
+    height: 600px;
+    background: rgba(255,255,255,.9);
+}
+
+#toggleShow {
+    width: 790px;
+    border-radius: 0px;
+    background: #dcb439;
+    color: #002b5b;
+}
+
+#toggleShow:hover {
+    background: #002b5b;
+    color: #dcb439;
+}

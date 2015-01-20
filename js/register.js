@@ -4,6 +4,27 @@ $(function () {
         $("body").css({ cursor: "url('../img/hoff.cur'), auto" });
     });
 
+    var panelVisible = true;
+
+    $("#toggleShow").click(function () {
+        if (panelVisible) {
+            $(this).text("Show Panel").css({ opacity: .6 });
+            $("#regContent").fadeOut();
+            $("#regPanel").animate({ height: "35px" });
+            panelVisible = false;
+        }
+        else {
+            $(this).text("Hide Panel").css({ opacity: 1 });
+            $("#regPanel").animate({ height: "600px" });
+            $("#regContent").fadeIn();
+            panelVisible = true;
+        }
+    });
+
+    $(window).scroll(function () {
+        $("#regPanel").css({ top: $(this).scrollTop()+80+"px" });
+    });
+
     var imgCount,
         numImages = 87,
         $collage = $("#collage"),
