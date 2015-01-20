@@ -4,6 +4,7 @@ body, html {
     padding: 0;
     margin: 0;
     font-family: 'Armata', sans-serif;
+    background: #ddd;
 }
 
 a {

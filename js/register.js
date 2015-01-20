@@ -4,6 +4,10 @@ $(function () {
         $("body").css({ cursor: "url('../img/hoff.cur'), auto" });
     });
 
+    Mousetrap.bind('z', function () {
+        window.location.href = "rua.html";
+    });
+
     var panelVisible = true;
 
     $("#toggleShow").click(function () {
