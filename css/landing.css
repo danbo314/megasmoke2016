@@ -12,11 +12,28 @@
     background-color: rgba(220,180,57,.9);
     color: #002b5b;
     position: relative;
+    box-shadow: 0px -1px 3px #3c3c3c;
+    z-index: 9
+}
+
+.scrollPanelHalf {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(220,180,57,.9);
+    color: #002b5b;
+    position: relative;
+    box-shadow: 0px 1px 3px grey;
+    z-index: 9
 }
 
 #mainBG {
     padding-top: 60px;
     background-image: url("../img/streetsmoke13.jpg");
+}
+
+#secBG {
+    box-shadow: 0px 1px 3px #313557;
+    z-index: 9
 }
 
 #banner {
@@ -41,7 +58,7 @@
 
 #thrBG {
     background-image: url("../img/maryTunnel.jpg");
-    background-position: center 1300px;
+    background-position: center 1317px;
 }
 
 .spContent {
@@ -59,8 +76,8 @@
 
 #logo {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 20px;
+    right: 30px;
     height: 100px;
     width: 100px;
 }
@@ -84,15 +101,17 @@
     background: rgba(255,255,255,.75);
 }
 
-#bottomContainer h1 {
+#bottomContainer .h1 {
+    font-size: 32px;
     margin: 0 0 20px 0;
     font-family: 'Allerta Stencil', sans-serif;
     text-align: center;
 }
 
-#bottomContainer h2 {
+#bottomContainer .h2 {
     margin: 0;
     font-size: 22px;
+    font-weight: bold;
 }
 
 #itinerary i {
@@ -127,4 +146,158 @@
 #guestList:hover {
     background: #dcb439;
     color: #009b48;
+}
+
+#fourBG {
+    background: #ddd;
+    overflow: hidden;
+}
+
+#contact {
+    width: 920px;
+    position:absolute;
+    left:0;
+    right:0;
+    bottom: 40px;
+    margin: 0 auto 0 auto;
+}
+
+.contactCard {
+    width: 450px;
+    float: left;
+    height: 190px;
+    margin: 5px;
+}
+
+.coverPhoto {
+    height: 190px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.coverPhoto > img {
+    width: 100%;
+    height: fill;
+    margin-top: -20px;
+}
+
+.coverPhoto .normImg {
+    left: 180px;
+    position: relative;
+}
+
+#pat > .coverPhoto > .normImg {
+    top: -320px;
+}
+
+#pat > .coverPhoto > .blurImg {
+    margin-left: -90px;
+}
+
+#hoff > .coverPhoto > .normImg {
+    top: -305px;
+}
+
+#hoff > .coverPhoto > .blurImg {
+    margin-left: -90px;
+}
+
+#dan > .coverPhoto > .normImg {
+    top: -300px;
+}
+
+#dan > .coverPhoto > .blurImg {
+    margin-left: -90px;
+}
+
+#sheehan > .coverPhoto > .normImg {
+    top: -280px;
+}
+
+#sheehan > .coverPhoto > .blurImg {
+    margin-left: -90px;
+}
+
+#flake > .coverPhoto > .normImg {
+    top: -285px;
+}
+
+#flake > .coverPhoto > .blurImg {
+    margin-left: -70px;
+}
+
+#erich > .coverPhoto > .normImg {
+    top: -660px;
+}
+
+#erich > .coverPhoto > .blurImg {
+    margin-left: -120px;
+}
+
+.profCont {
+    position: relative;
+    top: -210px;
+    left: 0;
+}
+
+.profLeft {
+    width: 180px;
+    text-align: center;
+}
+
+.profilePhoto {
+    margin: 30px 0 0 33px;
+    overflow: hidden;
+    border-radius: 50%;
+    height: 110px;
+    width: 110px;
+}
+
+.profilePhoto > img {
+    width: 100%;
+    height: fill;
+}
+
+.profLeft > .h1 {
+    color: #f0f0f0;
+    font-size: 20px;
+    text-shadow: 0px 0px 5px #000;
+}
+
+.profLeft > .h2 {
+    color: #f0f0f0;
+    font-size: 12px;
+    text-shadow: 0px 0px 5px #000;
+}
+
+.profLeft > .h3 {
+    color: #f0f0f0;
+    font-size: 10px;
+    height: 13px;
+    text-shadow: 0px 0px 5px #000;
+    overflow-x: scroll;
+}
+
+#pat >.profCont > .profLeft > .profilePhoto > img {
+    margin: -15px 0 0 0;
+}
+
+#hoff >.profCont > .profLeft > .profilePhoto > img {
+    margin: -28px -2px 0 0;
+}
+
+#dan >.profCont > .profLeft >  .profilePhoto > img {
+    margin: -10px 0 0 0;
+}
+
+#sheehan >.profCont > .profLeft >  .profilePhoto > img {
+    margin: -35px -5px 0 0;
+}
+
+#flake >.profCont > .profLeft >  .profilePhoto > img {
+    margin: -40px -5px 0 0;
+}
+
+#erich >.profCont > .profLeft >  .profilePhoto > img {
+    margin: -10px 0 0 0;
 }

@@ -26,7 +26,7 @@ $(function () {
     });
 
     var imgCount,
-        numImages = 87,
+        numImages = 88,
         $collage = $("#collage"),
         path;
 

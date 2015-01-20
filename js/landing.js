@@ -8,10 +8,12 @@ $(function() {
         $("body").css({ cursor: "url('../img/hoff.cur'), auto" });
     });
 
-    $(".pimg").height($(window).height());
+    $(".pimg:not(#fourBG)").height($(window).height());
+    $("#fourBG").height($(window).height()-100);
 
     $(window).resize(function () {
-        $(".pimg").height($(window).height());
+        $(".pimg:not(#fourBG)").height($(window).height());
+        $("#fourBG").height($(window).height()-100);
     });
 
     var oldT;
