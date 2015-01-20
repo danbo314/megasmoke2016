@@ -8,10 +8,6 @@ $(function() {
         $("body").css({ cursor: "url('../img/hoff.cur'), auto" });
     });
 
-    Mousetrap.bind('z', function () {
-        window.location.href = "html/rua.html";
-    });
-
     $(".pimg:not(#fourBG)").height($(window).height());
     $("#fourBG").height($(window).height()-100);
 
