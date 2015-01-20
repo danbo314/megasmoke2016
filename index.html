@@ -2,44 +2,18 @@
 
 <head>
     <link href='http://fonts.googleapis.com/css?family=Armata|Allerta+Stencil' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/styles.css" type="text/css"/>
+    <link rel="stylesheet" href="css/main.css" type="text/css"/>
+    <link rel="stylesheet" href="css/landing.css" type="text/css"/>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/mousetrap.min.js"></script>
-    <script type="text/javascript">
-        $(function() {
-            $.stellar({
-                horizontalScrolling: false,
-                verticalOffset: 40
-            });
-
-            Mousetrap.bind('ctrl+alt+h o f f', function() {
-                $("body").css({ cursor: "url('../img/hoff.cur'), auto" });
-            });
-
-            $(".pimg").height($(window).height());
-
-            $(window).resize(function () {
-                $(".pimg").height($(window).height());
-            });
-
-            var oldT;
-
-            $("#signUp .button").hover(function () {
-                oldT = $(this).text();
-                $(this).text("Coming Soon");
-            },
-            function () {
-                $(this).text(oldT);
-            });
-        });
-    </script>
+    <script src="js/lib/jquery.stellar.min.js"></script>
+    <script src="js/lib/mousetrap.min.js"></script>
+    <script src="js/landing.js"></script>
 </head>
 
 <body>
     <div class='pimg' id='mainBG' data-stellar-background-ratio='0.5'>
-        <img id="logo" src="img/logo.jpg"/>
+        <a href="https://ndultimate.wordpress.com/photos-and-videos/" target="_blank"><img id="logo" src="img/logo.jpg"/></a>
         <div id="banner">Megasmoke</div>
         <div id="bannerDates">March 16-20, 2016</div>
     </div>
@@ -77,7 +51,7 @@
                 <ul><li>Brunch <i>South Dining Hall</i></li></ul>
             </div>
             <div id="signUp">
-                <!--<a href="html/register.html">--><div class="button" id="register">Sign Up</div><!--</a>-->
+                <a href="html/register.html"><div class="button" id="register">Sign Up</div></a>
                 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign up to attend Megasmoke 2016.  It'll only take a few short moments: a quick survey and a couple of logistical questions.</p>
                 <!--<a href="html/guests.html">--><div class="button" id="guestList">Guest List</div><!--</a>-->
                 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Check out who else is making it out to Megasmoke 2016 and heckle your friends who haven't signed up yet!</p>
