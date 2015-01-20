@@ -8,6 +8,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="js/lib/jquery.stellar.min.js"></script>
     <script src="js/lib/mousetrap.min.js"></script>
+
+    <script src="//www.parsecdn.com/js/parse-1.3.3.min.js"></script>
+    <script type="text/javascript" src="js/model.js"></script>
+    <script type="text/javascript" src="js/controller.js"></script>
     <script src="js/landing.js"></script>
 </head>
 
@@ -53,7 +57,7 @@
             <div id="signUp">
                 <a href="html/register.html"><div class="button" id="register">Sign Up</div></a>
                 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign up to attend Megasmoke 2016.  It'll only take a few short moments: a quick survey and a couple of logistical questions.</p>
-                <!--<a href="html/guests.html">--><div class="button" id="guestList">Guest List</div><!--</a>-->
+                <!--<a href="html/guests.html">--><div class="button" id="guestList" onclick="javascript:getRegistrations(); return false">Guest List</div><!--</a>-->
                 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Check out who else is making it out to Megasmoke 2016 and heckle your friends who haven't signed up yet!</p>
             </div>
         </div>
