@@ -9,7 +9,7 @@ $(function() {
     });
 
     Mousetrap.bind('z', function () {
-        window.location.href = "rua.html";
+        window.location.href = "html/rua.html";
     });
 
     $(".pimg:not(#fourBG)").height($(window).height());
