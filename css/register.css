@@ -17,13 +17,13 @@
     right:0;
     top: 80px;
     margin: 0 auto 0 auto;
-    width: 800px;
-    height: 600px;
-    background: rgba(255,255,255,.9);
+    width: 400px;
+    height: 400px;
+    background: rgba(255,255,255,.95);
 }
 
 #toggleShow {
-    width: 790px;
+    width: 390px;
     border-radius: 0px;
     background: #dcb439;
     color: #002b5b;
@@ -32,4 +32,81 @@
 #toggleShow:hover {
     background: #002b5b;
     color: #dcb439;
+}
+
+#toggleShow > img {
+    width: 50px;
+    height: 50px;
+}
+
+::-webkit-input-placeholder {
+    font-family: 'Armata', sans-serif;
+    text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    font-family: 'Armata', sans-serif;
+    text-align: center;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    font-family: 'Armata', sans-serif;
+    text-align: center;
+}
+
+:-ms-input-placeholder {
+    font-family: 'Armata', sans-serif;
+    text-align: center;
+}
+
+form {
+    width: 400px;
+    margin: 50px auto 0 auto;
+    text-align: center;
+}
+
+form > input[type=text] {
+    width: 200px;
+    height: 20px;
+    margin: 10px auto 10px auto;
+    border-radius: 3px;
+    border: 1px solid grey;
+    font-family: 'Armata', sans-serif;
+    font-size: 14px;
+    padding: 5px;
+}
+
+form > input[type=text]:hover {
+    border-color: #07bcde;
+}
+
+form > input[type=text]:focus {
+    outline: none;
+}
+
+form > label {
+    display: block;
+    margin: 10px auto 0 auto;
+}
+
+form > input[type=range] {
+    margin: 0 auto 10px auto;
+}
+
+form > .button {
+    background: #009b48;
+    color: #002b5b;
+    border: none;
+    margin: 10px auto 0 auto;
+}
+
+form > .button:hover {
+    background: #002b5b;
+    color: #009b48;
+}
+
+form > span {
+    display: inline-block;
+    width: 25px;
+    text-align: center;
 }

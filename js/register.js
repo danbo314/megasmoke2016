@@ -4,25 +4,47 @@ $(function () {
         $("body").css({ cursor: "url('../img/hoff.cur'), auto" });
     });
 
-    var panelVisible = true;
+    var panelVisible = true,
+        left;
 
     $("#toggleShow").click(function () {
         if (panelVisible) {
-            $(this).text("Show Panel").css({ opacity: .6 });
+            $(this).text("Show Form");
             $("#regContent").fadeOut();
-            $("#regPanel").animate({ height: "35px" });
+            $("#regPanel").animate({ height: "35px" }, function () {
+                left = $(this).offset().left;
+
+                $(this).css({ left: left+"px", right: "auto", margin: "auto" }).stop().animate({ left: 0, width: "50px", height: "50px", "border-radius": "50%" });
+
+                $(this).find("#toggleShow").stop().html("<img src='../img/text-paragraph.svg' />").animate({ padding: 0, height: "50px", width:"50px", "border-radius": "50%" });
+            });
             panelVisible = false;
         }
         else {
-            $(this).text("Hide Panel").css({ opacity: 1 });
-            $("#regPanel").animate({ height: "600px" });
-            $("#regContent").fadeIn();
+            $("#toggleShow").stop().animate({ "border-radius": 0, height: "26px", padding: "5px", width:"390px" }).html("Hide Form");
+            $("#regPanel").stop().animate({ "border-radius": 0, width: "400px", height: "26px" }, function () {
+                $(this).animate({ left: left+"px" }, function() {
+                    $(this).css({ left: 0, right: 0, margin: "0 auto 0 auto" });
+                    $(this).animate({ height: "400px" });
+                    $("#regContent").fadeIn();
+                });
+            });
+
             panelVisible = true;
         }
     });
 
+    var scrollTimer,
+        scrollFunc = function () {
+            $("#regPanel").animate({ top: $(this).scrollTop()+80+"px" });
+        };
+
     $(window).scroll(function () {
-        $("#regPanel").css({ top: $(this).scrollTop()+80+"px" });
+        if (scrollTimer) {
+            clearTimeout(scrollTimer);
+        }
+
+        scrollTimer = setTimeout(scrollFunc, 50);
     });
 
     var imgCount,
