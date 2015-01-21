@@ -11,6 +11,10 @@ a {
     text-decoration: none;
 }
 
+p {
+    text-indent: 30px;
+}
+
 .button {
     width: 150px;
     padding: 5px;
@@ -20,4 +24,5 @@ a {
     border-radius: 3px;
     cursor: pointer;
     margin: 0 auto 0 auto;
+    display: block;
 }
