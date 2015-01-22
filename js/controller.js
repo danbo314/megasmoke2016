@@ -4,6 +4,7 @@ function submitRegistration() {
 
   participant.save({
       fullName: form.find('input[name="fullName"]').val(),
+      email: form.find('input[name="email"]').val(),
       nickName: form.find('input[name="nickName"]').val(),
       gradYear: form.find('input[name="gradYear"]').val(),
       attending: form.find('input[name="attendance"]').val(),

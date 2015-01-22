@@ -26,15 +26,16 @@
     <div id="regPanel">
         <div class="button" id="toggleShow">Hide Form</div>
         <div id="regContent">
-            <form name="register" action="javascript:submitRegistration();">
+            <form class="registration-info" name="register" action="javascript:submitRegistration();">
                 <input type="text" name="fullName" placeholder="Full Name" /><br />
+                <input type="text" name="email" placeholder="Email Address" /><br />
                 <input type="text" name="nickName" placeholder="Nickname"/><br />
                 <input type="text" name="gradYear" placeholder="Graduating Year"/><br />
                 <label>Odds You Can Come?</label><br />
                 <input name="attendance" min="0" max="10" step="1" type="range" onchange="updateSliderBox(this.value, 'attendanceDisp')" />
                 <span class="attendanceDisp">5</span><br />
                 <label>Number of People in Your Party?</label><br />
-                <input name="members" min="0" max="10" step="1" type="range" onchange="updateSliderBox(this.value, 'membersDisp')" value="1" />
+                <input name="members" min="1" max="10" step="1" type="range" onchange="updateSliderBox(this.value, 'membersDisp')" value="1" />
                 <span class="membersDisp">1</span><br />
                 <input class="button" type="submit" value="Register" />
             </form>

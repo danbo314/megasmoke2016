@@ -77,12 +77,6 @@ div.landing h2 {
     font-size: 20px;
 }
 
-#signUp {
-    float: right;
-    width: 400px;
-    height: 516px;
-}
-
 #logo {
     position: absolute;
     top: 20px;
@@ -91,9 +85,17 @@ div.landing h2 {
     width: 100px;
 }
 
-#itinerary {
-    width: 400px;
-    float: left;
+/* two columns */
+.column {
+  width: 40%;
+  height: 520px;
+}
+
+.column-left {
+  float: left;
+}
+.column-right {
+  float: right;
 }
 
 #bottomContainer {
@@ -139,7 +141,8 @@ div.landing h2 {
 
 #register {
     background: #002b5b;
-    margin-top: 90px !important;
+    color: #dcb439;
+    margin-top: 50px;
 }
 
 #register:hover {
@@ -149,7 +152,7 @@ div.landing h2 {
 
 #guestList {
     background: #009b48;
-    margin-top: 50px !important;
+    margin-top: 50px;
 }
 
 #guestList:hover {
