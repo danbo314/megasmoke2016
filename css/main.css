@@ -3,7 +3,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Armata', sans-serif;
-    background: #ddd;
+    background: url("../img/Camo.jpg") repeat;
 }
 
 a {
