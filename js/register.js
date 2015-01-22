@@ -25,7 +25,7 @@ $(function () {
             $("#regPanel").stop().animate({ "border-radius": 0, width: "400px", height: "26px" }, function () {
                 $(this).animate({ left: left+"px" }, function() {
                     $(this).css({ left: 0, right: 0, margin: "0 auto 0 auto" });
-                    $(this).animate({ height: "400px" });
+                    $(this).animate({ height: "480px" });
                     $("#regContent").fadeIn();
                 });
             });

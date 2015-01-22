@@ -15,8 +15,8 @@
     <script type="text/javascript" src="../js/controller.js"></script>
     <script src="../js/register.js"></script>
     <script type="text/javascript">
-        function updateSliderBox(val) {
-            $("form > span").text(val);
+        function updateSliderBox(val, sclass) {
+            $("form > span."+sclass).text(val);
         }
     </script>
 </head>
@@ -31,11 +31,13 @@
                 <input type="text" name="nickName" placeholder="Nickname"/><br />
                 <input type="text" name="gradYear" placeholder="Graduating Year"/><br />
                 <label>Odds You Can Come?</label><br />
-                <input name="attendance" min="0" max="10" step="1" type="range" onchange="updateSliderBox(this.value)" />
-                <span>5</span><br />
+                <input name="attendance" min="0" max="10" step="1" type="range" onchange="updateSliderBox(this.value, 'attendanceDisp')" />
+                <span class="attendanceDisp">5</span><br />
+                <label>Number of People in Your Party?</label><br />
+                <input name="members" min="0" max="10" step="1" type="range" onchange="updateSliderBox(this.value, 'membersDisp')" value="1" />
+                <span class="membersDisp">1</span><br />
                 <input class="button" type="submit" value="Register" />
             </form>
         </div>
     </div>
 </body>
-
