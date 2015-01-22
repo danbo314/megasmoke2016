@@ -316,13 +316,13 @@ div.landing h2 {
     box-shadow: 0px 1px 3px #1a1a1a;
     z-index: 9;
     height: 90px;
-    background: #009b48;
+    background: rgba(0,151,68,.9);
     color: #dcb439;
 }
 
 #panel3 {
     height: 140px;
-    background: #002b5b;
+    background: rgba(2,43,91,.9);
     color: #009b48;
     box-shadow: 0px 0px 3px #1a1a1a;
 }
