@@ -18,8 +18,11 @@
     top: 80px;
     margin: 0 auto 0 auto;
     width: 400px;
-    height: 480px;
     background: rgba(255,255,255,.95);
+}
+
+.registration-info {
+  padding: 15px 0 20px 0;
 }
 
 #toggleShow {
@@ -60,8 +63,6 @@
 }
 
 form {
-    width: 400px;
-    margin: 35px auto 0 auto;
     text-align: center;
 }
 
