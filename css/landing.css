@@ -43,7 +43,7 @@ div.landing h2 {
 
 .youtubeTrailer {
   height: 500px;
-  width: 800px;
+  width: 1000px;
 }
 
 .scrollPanel {
@@ -292,7 +292,7 @@ div.landing h2 {
 }
 
 #hoff >.profCont > .profLeft > .profilePhoto > img {
-    margin: -28px -2px 0 0;
+    margin: -30px 0 0 0;
 }
 
 #dan >.profCont > .profLeft >  .profilePhoto > img {
@@ -300,11 +300,11 @@ div.landing h2 {
 }
 
 #sheehan >.profCont > .profLeft >  .profilePhoto > img {
-    margin: -35px -5px 0 0;
+    margin: -40px 5px 0 0;
 }
 
 #flake >.profCont > .profLeft >  .profilePhoto > img {
-    margin: -40px -5px 0 0;
+    margin: -40px 5px 0 0;
 }
 
 #erich >.profCont > .profLeft >  .profilePhoto > img {
