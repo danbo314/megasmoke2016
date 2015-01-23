@@ -97,11 +97,24 @@ function submitRegistration() {
   });
 }
 
-function getRegistrations() {
+function getAllYears(callback) {
+  getRegistrations(false, function(data) {
+    var distinctYears = [];
+      for (var i = 0; i < data.length; i++) {
+        if ($.inArray(data[i].gradYear, distinctYears) < 0) {
+          distinctYears.push(data[i].gradYear);
+        }
+      }
+    callback(distinctYears);
+  });
+
+}
+
+function getRegistrations(filter, callback) {
   var query = new Parse.Query(Participant);
-  if (typeof filter !== 'undefined') {
-    if (typeof filter['gradYear'] != 'undefined') {
-      query.equalTo('gradYear', filter['gradYear']);
+  if (filter) {
+    if (typeof filter.gradYear !== 'undefined' && filter.gradYear) {
+      query.equalTo('gradYear', parseInt(filter.gradYear));
     }
   }
   query.find({
@@ -110,10 +123,11 @@ function getRegistrations() {
       for (var i = 0; i < results.length; i++) {
         returnArray.push(results[i].toJSON());
       }
-      return returnArray;
+	callback(returnArray);
     },
     error: function(error) {
       return false;
     }
   });
 }
+
