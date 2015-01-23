@@ -43,17 +43,13 @@ $(function () {
         }
     });
 
-    var scrollTimer,
-        scrollFunc = function () {
-            $("#regPanel").animate({ top: $(this).scrollTop()+80+"px" });
-        };
-
     $(window).scroll(function () {
-        if (scrollTimer) {
-            clearTimeout(scrollTimer);
+        if ($(this).scrollTop() > 70) {
+            $("#navbar").addClass("small");
         }
-
-        scrollTimer = setTimeout(scrollFunc, 50);
+        else {
+            $("#navbar").removeClass("small");
+        }
     });
 
     var imgCount,

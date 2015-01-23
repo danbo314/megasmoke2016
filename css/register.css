@@ -1,6 +1,7 @@
 #collage{
     /* define how much padding you want in between your images */
     padding: 0;
+    margin-top: 70px;
 }
 
 #collage img{
@@ -12,10 +13,10 @@
 }
 
 #regPanel {
-    position:absolute;
+    position: fixed;
     left:0;
     right:0;
-    top: 80px;
+    top: 120px;
     margin: 0 auto 0 auto;
     width: 400px;
     background: rgba(255,255,255,.95);
