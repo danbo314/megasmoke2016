@@ -4,6 +4,10 @@ $(function () {
         $("body").css({ cursor: "url('../img/hoff.cur'), auto" });
     });
 
+    Mousetrap.bind(['enter', 'return'], function() {
+        validateAndRegister();
+    });
+
     var panelVisible = true,
         left;
 
@@ -85,5 +89,43 @@ $(function () {
         }
 
         resizeTimer = setTimeout(collage, 200);
+    });
+
+    $form.find("input[type='text']").focus(function () {
+        $submitError.fadeOut();
+        $(this).removeClass("success error");
+    });
+
+    var keyupHandler = function(target, validFunc, $statusNode, validText, invalidText) {
+            var $self = $(target),
+                currText = $self.val();
+
+            if (currText.length > 0) {
+                if (validFunc(currText)) {
+                    $statusNode.text(validText).removeClass("invalid").addClass("valid");
+                }
+                else {
+                    $statusNode.text(invalidText).removeClass("valid").addClass("invalid");
+                }
+
+                $self.css({ "border-radius": "3px 3px 0 0" });
+                $statusNode.fadeTo("slow", 1);
+            }
+            else {
+                $statusNode.fadeTo("slow", 0);
+                $self.css({ "border-radius": "3px" });
+            }
+        };
+
+    $email.on({
+        keyup: function() {
+            keyupHandler(this, isValidEmailAddress, $emailStatus, "Valid email format", "Invalid email format");
+        }
+    });
+
+    $gradYear.on({
+        keyup: function() {
+            keyupHandler(this, checkGradYear, $gradYearStatus, "Grad year is valid", "Grad Year is out of bounds");
+        }
     });
 });

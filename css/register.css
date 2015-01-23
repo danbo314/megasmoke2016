@@ -22,7 +22,7 @@
 }
 
 .registration-info {
-  padding: 15px 0 20px 0;
+  padding: 25px 0 50px 0;
 }
 
 #toggleShow {
@@ -77,6 +77,14 @@ form > input[type=text] {
     padding: 5px;
 }
 
+form > input[type=text].error, form > input[type=text].error:hover {
+    border-color: #e8000f;
+}
+
+form > input[type=text].success, form > input[type=text].success:hover {
+    border-color: #00d362;
+}
+
 form > input[type=text]:hover {
     border-color: #07bcde;
 }
@@ -98,6 +106,7 @@ form > .button {
     background: #009b48;
     color: #002b5b;
     border: none;
+    outline: none;
     margin: 10px auto 0 auto;
 }
 
@@ -110,4 +119,33 @@ form > span {
     display: inline-block;
     width: 25px;
     text-align: center;
+}
+
+.status {
+    width: 212px;
+    height: 15px;
+    line-height: 15px;
+    margin: -11px auto 0 auto;
+    border-radius: 0 0 3px 3px;
+    font-size: 12px;
+    opacity: 0;
+    color: white;
+}
+
+.status.valid {
+    background: #00d362;
+}
+
+.status.invalid {
+    background: #e8000f;
+}
+
+#submitError {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 5px 0 5px 0;
+    background: #e8000f;
+    color: white;
+    display: none;
 }
