@@ -4,5 +4,9 @@ body {
 
 #gameContainer {
     width: 972px;
-    margin: 0 auto 0 auto;
+    margin: 70px auto 0 auto;
+}
+
+#navbar > #center {
+    width: 700px;
 }
