@@ -9,12 +9,16 @@ $(function () {
     });
 
     var panelVisible = true,
-        left;
+        left,
+        height;
 
     $("#toggleShow").click(function () {
         if (panelVisible) {
+            height = $("#regPanel").height();
+
             $(this).text("Show Form");
             $("#regContent").fadeOut();
+
             $("#regPanel").animate({ height: "35px" }, function () {
                 left = $(this).offset().left;
 
@@ -26,10 +30,11 @@ $(function () {
         }
         else {
             $("#toggleShow").stop().animate({ "border-radius": 0, height: "26px", padding: "5px", width:"390px" }).html("Hide Form");
+
             $("#regPanel").stop().animate({ "border-radius": 0, width: "400px", height: "26px" }, function () {
                 $(this).animate({ left: left+"px" }, function() {
                     $(this).css({ left: 0, right: 0, margin: "0 auto 0 auto" });
-                    $(this).animate({ height: "480px" });
+                    $(this).animate({ height: height+"px" });
                     $("#regContent").fadeIn();
                 });
             });
