@@ -80,9 +80,9 @@ function submitRegistration() {
       fullName: $fullName.val(),
       email: $email.val(),
       nickName: $nickName.val(),
-      gradYear: $gradYear.val(),
-      attending: $attendance.val(),
-      numPeople: $numPeople.val(),
+      gradYear: parseInt($gradYear.val()),
+      attending: parseInt($attendance.val()),
+      numPeople: parseInt($numPeople.val()),
   }, {
     success: function(participant) {
         $form[0].reset();
@@ -91,25 +91,29 @@ function submitRegistration() {
         $form.find("input[type='text']").removeClass("success");
         $('div.button#toggleShow').click();
     },
-    error: function(participant) {
-        alert('sorry could not save your information');
+    error: function(participant, error) {
+        alert('sorry could not save your information: ' + error.message);
     }
   });
 }
 
 function getRegistrations() {
   var query = new Parse.Query(Participant);
+  if (typeof filter !== 'undefined') {
+    if (typeof filter['gradYear'] != 'undefined') {
+      query.equalTo('gradYear', filter['gradYear']);
+    }
+  }
   query.find({
     success: function(results) {
-      var returnString = "got "+results.length+" results\n";
+      var returnArray = [];
       for (var i = 0; i < results.length; i++) {
-        returnString += results[i].get('fullName') + ' - ' + results[i].get('nickName') + results[i].get('gradYear') + ' - ' +
-                        results[i].get('attending') + ' - ' + results[i].get('numPeople') + '\n';
+        returnArray.push(results[i].toJSON());
       }
-      alert(returnString);
+      return returnArray;
     },
     error: function(error) {
-      alert("Could not find registrations "+error.code+" "+error.message);
+      return false;
     }
   });
 }
