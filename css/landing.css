@@ -94,6 +94,11 @@ div.landing h2 {
 .column-left {
   float: left;
 }
+
+.column-left li > i {
+    color: #009b48;
+}
+
 .column-right {
   float: right;
 }
