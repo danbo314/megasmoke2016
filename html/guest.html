@@ -24,12 +24,11 @@
     }
 
     $(function () {
-	getRegistrations(false, function(data) {
-	  for (var i = 0; i < data.length; i++) {
-	    $('#guests').append("<li>"+data[i].fullName+"</li>");
-	  }
-	});
+	// initial load of all guests
+	refreshGuests(false);
 
+	// filter based on year
+	// TODO expand this to other fields
 	$('select.guest-filter').change( function () {
 	  refreshGuests({gradYear: $(this).val()});
 	});
