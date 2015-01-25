@@ -92,7 +92,7 @@ function submitRegistration() {
         $('div.button#toggleShow').click();
         $("#regSuccess").show();
         setTimeout(function() {
-            $("#regSuccess").hide();
+            $("#regSuccess").fadeOut();
         }, 6000);
     },
     error: function(participant, error) {

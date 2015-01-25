@@ -26,19 +26,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	border-spacing: 0;
 }
 
-.h1 {
-    font-size: 32px;
-    margin: 0 0 20px 0;
-    font-family: 'Allerta Stencil', sans-serif;
-    text-align: center;
-}
-
-.h2 {
-    margin: 0;
-    font-size: 22px;
-    font-weight: bold;
-}
-
 .button {
     width: 150px;
     padding: 5px;

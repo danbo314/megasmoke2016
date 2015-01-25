@@ -112,6 +112,19 @@ div.landing h2 {
     margin: 0 auto 0 auto;
 }
 
+#bottomContainer .h1 {
+    font-size: 32px;
+    margin: 0 0 20px 0;
+    font-family: 'Allerta Stencil', sans-serif;
+    text-align: center;
+}
+
+#bottomContainer .h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
 #bottomContainer > div {
     padding: 20px;
     background: rgba(255,255,255,.75);
