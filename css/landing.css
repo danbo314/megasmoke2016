@@ -117,19 +117,6 @@ div.landing h2 {
     background: rgba(255,255,255,.75);
 }
 
-#bottomContainer .h1 {
-    font-size: 32px;
-    margin: 0 0 20px 0;
-    font-family: 'Allerta Stencil', sans-serif;
-    text-align: center;
-}
-
-#bottomContainer .h2 {
-    margin: 0;
-    font-size: 22px;
-    font-weight: bold;
-}
-
 #itinerary i {
     color: #009b48;
 }

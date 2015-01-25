@@ -90,6 +90,10 @@ function submitRegistration() {
         $gradYearStatus.hide();
         $form.find("input[type='text']").removeClass("success");
         $('div.button#toggleShow').click();
+        $("#regSuccess").show();
+        setTimeout(function() {
+            $("#regSuccess").hide();
+        }, 6000);
     },
     error: function(participant, error) {
         alert('sorry could not save your information: ' + error.message);
@@ -111,23 +115,25 @@ function getAllYears(callback) {
 }
 
 function getRegistrations(filter, callback) {
-  var query = new Parse.Query(Participant);
-  if (filter) {
-    if (typeof filter.gradYear !== 'undefined' && filter.gradYear) {
-      query.equalTo('gradYear', parseInt(filter.gradYear));
+    var query = new Parse.Query(Participant);
+    if (filter) {
+        if (typeof filter.gradYear !== 'undefined' && filter.gradYear) {
+            query.equalTo('gradYear', parseInt(filter.gradYear));
+        }
     }
-  }
-  query.find({
-    success: function(results) {
-      var returnArray = [];
-      for (var i = 0; i < results.length; i++) {
-        returnArray.push(results[i].toJSON());
-      }
-	callback(returnArray);
-    },
-    error: function(error) {
-      return false;
-    }
-  });
+    query.addAscending("gradYear");
+    query.find({
+        success: function(results) {
+            var returnArray = [];
+
+            for (var i = 0; i < results.length; i++) {
+                returnArray.push(results[i].toJSON());
+            }
+            callback(returnArray);
+        },
+        error: function(error) {
+            return false;
+        }
+    });
 }
 

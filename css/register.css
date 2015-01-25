@@ -1,15 +1,36 @@
-#collage{
-    /* define how much padding you want in between your images */
-    padding: 0;
-    margin-top: 70px;
+#regSuccess {
+    display: none;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    height: 200px;
+    width: 500px;
+    background: rgba(0,151,68,.9);
+    z-index: 999;
+    color: white;
+    padding: 40px 20px 0 20px;
+    border-radius: 10px;
 }
 
-#collage img{
-    /* ensures padding at the bottom of the image is correct */
-    vertical-align:bottom;
+.control {
+    position: fixed;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
 
-    /* hide the images until the plugin has run. the plugin will reveal the images*/
-    opacity:0;
+#play {
+    display: none;
+    top: 185px;
+}
+
+#pause {
+    top: 185px;
+}
+
+#mute {
+    top: 245px;
 }
 
 #regPanel {
@@ -19,7 +40,7 @@
     top: 120px;
     margin: 0 auto 0 auto;
     width: 400px;
-    background: rgba(255,255,255,.95);
+    color: white;
 }
 
 .registration-info {
@@ -27,14 +48,17 @@
 }
 
 #toggleShow {
-    width: 390px;
-    border-radius: 0px;
     background: #dcb439;
     color: #002b5b;
 }
 
+#toggleShow > img {
+    position: absolute;
+    left: 5px;
+}
+
 #toggleShow:hover {
-    background: #002b5b;
+    background: #002b5b !important;
     color: #dcb439;
 }
 

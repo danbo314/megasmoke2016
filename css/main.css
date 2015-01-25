@@ -26,6 +26,19 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	border-spacing: 0;
 }
 
+.h1 {
+    font-size: 32px;
+    margin: 0 0 20px 0;
+    font-family: 'Allerta Stencil', sans-serif;
+    text-align: center;
+}
+
+.h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
 .button {
     width: 150px;
     padding: 5px;
@@ -65,7 +78,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 #navbar > #center {
     height: 100%;
     display: block;
-    width: 500px;
+    width: 700px;
     margin: 0 auto 0 auto;
 }
 

@@ -3,46 +3,53 @@
 <head>
     <link href='http://fonts.googleapis.com/css?family=Armata|Allerta+Stencil' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../css/main.css" type="text/css"/>
-    <link rel="stylesheet" href="../fancybox/jquery.fancybox.css" type="text/css"/>
     <link rel="stylesheet" href="../css/register.css" type="text/css"/>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="../js/lib/mousetrap.min.js"></script>
-    <script src="../js/lib/jquery.collagePlus.min.js"></script>
-    <script src="../fancybox/jquery.fancybox.pack.js"></script>
     <script src="//www.parsecdn.com/js/parse-1.3.3.min.js"></script>
     <script type="text/javascript" src="../js/model.js"></script>
     <script type="text/javascript" src="../js/controller.js"></script>
+    <script src="../js/lib/jquery.tubular.1.0.js"></script>
     <script src="../js/register.js"></script>
 </head>
 
 <body>
-    <div id="collage"></div>
-    <div id="navbar">
-        <div id="center">
-            <a class="logo" href="../index.html">Megasmoke <span>2016</span></a>
-            <a class="navOp" href="guest.html">Guest List</a>
-        </div>
+    <div id="regSuccess">
+        <div class="h1">Success!</div>
+        <div class="h2">Thanks for registering.  Stay tuned for more updates on Megasmoke 2016, and please check out the rest of the site!</div>
     </div>
-    <div id="regPanel">
-        <div class="button" id="toggleShow">Hide Form</div>
-        <div id="regContent">
-            <form class="registration-info" name="register" action="javascript:validateAndRegister();" autocomplete="off">
-                <input type="text" name="fullName" placeholder="Full Name" /><br />
-                <input type="text" name="email" placeholder="Email Address" /><br />
-                <div id="emailStatus" class="status"></div>
-                <input type="text" name="nickName" placeholder="Nickname"/><br />
-                <input type="text" name="gradYear" placeholder="Graduating Year"/><br />
-                <div id="gradYearStatus" class="status"></div>
-                <label>Odds You Can Come?</label><br />
-                <input name="attendance" min="0" max="10" step="1" type="range" onchange="updateSliderBox(this.value, 'attendanceDisp')" />
-                <span class="attendanceDisp">5</span><br />
-                <label>Number of People in Your Party?</label><br />
-                <input name="members" min="1" max="10" step="1" type="range" onchange="updateSliderBox(this.value, 'membersDisp')" value="1" />
-                <span class="membersDisp">1</span><br />
-                <input class="button" type="submit" value="Register" />
-                <div id="submitError">Not all fields were filled in properly.</div>
-            </form>
+    <div id="wrapper">
+        <div id="navbar" class="small">
+            <div id="center">
+                <a class="logo" href="../index.html">Megasmoke <span>2016</span></a>
+                <a class="navOp" href="gallery.html">Gallery</a>
+                <a class="navOp" href="guest.html">Guest List</a>
+            </div>
+        </div>
+        <img src="../img/play.svg" id="play" class="control tubular-play"/>
+        <img src="../img/pause.svg" id="pause" class="control tubular-pause"/>
+        <img src="../img/sound-on.svg" id="mute" class="control tubular-mute"/>
+        <div id="regPanel">
+            <div class="button" id="toggleShow">Hide Form</div>
+            <div id="regContent">
+                <form class="registration-info" name="register" action="javascript:validateAndRegister();" autocomplete="off">
+                    <input type="text" name="fullName" placeholder="Full Name" /><br />
+                    <input type="text" name="email" placeholder="Email Address" /><br />
+                    <div id="emailStatus" class="status"></div>
+                    <input type="text" name="nickName" placeholder="Nickname"/><br />
+                    <input type="text" name="gradYear" placeholder="Graduating Year"/><br />
+                    <div id="gradYearStatus" class="status"></div>
+                    <label>Odds You Can Come?</label><br />
+                    <input name="attendance" min="0" max="10" step="1" type="range" onchange="updateSliderBox(this.value, 'attendanceDisp')" />
+                    <span class="attendanceDisp">5</span><br />
+                    <label>Number of People in Your Party?</label><br />
+                    <input name="members" min="1" max="10" step="1" type="range" onchange="updateSliderBox(this.value, 'membersDisp')" value="1" />
+                    <span class="membersDisp">1</span><br />
+                    <input class="button" type="submit" value="Register" />
+                    <div id="submitError">Not all fields were filled in properly.</div>
+                </form>
+            </div>
         </div>
     </div>
 </body>
