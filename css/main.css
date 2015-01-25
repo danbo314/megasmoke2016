@@ -14,6 +14,18 @@ p {
     text-indent: 30px;
 }
 
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    border-collapse: collapse;
+	border-spacing: 0;
+}
+
 .button {
     width: 150px;
     padding: 5px;

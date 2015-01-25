@@ -1,0 +1,124 @@
+#container {
+    background: url("../img/rage_sectionals_2014.jpg") no-repeat top center;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#guestTable {
+    min-height: 70%;
+    max-height: 80%;
+    width: 800px;
+    margin: 150px auto 40px auto;
+}
+
+#guestTable > #yearTabs {
+    height: 40px;
+    overflow-x: auto;
+}
+
+#yearTabs > .tab {
+    position:relative;
+    height: 40px;
+    width: 50px;
+    line-height: 40px;
+    padding: 0 20px 0 10px;
+    color: #bfbfbf;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 0 30px 0 0;
+    box-shadow: 1px -1px 5px #6c6c6c;
+    opacity: .85;
+
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#yearTabs > .tab:hover {
+    color: #dcb439;
+    opacity: 1;
+}
+
+#yearTabs > .tab.green {
+    background: #009b48;
+}
+
+#yearTabs > .tab.blue {
+    background: #002b5b;
+}
+
+#yearTabs > .tab.selected {
+    background: white;
+    color: #dcb439;
+    opacity: 1;
+}
+
+#guestTable > #tableCont {
+    overflow-y: auto;
+    background: white;
+}
+
+#tableCont > table  {
+    width: 100%;
+    border-top: 1px solid white;
+}
+
+#tableCont > table tr:nth-child(even) {
+    background: #ededed;
+}
+
+#tableCont > table tr:nth-child(odd) {
+    background: #e0e0e0;
+}
+
+#tableCont > table th {
+    color: white;
+    text-shadow: 0px 0px 1px #020202;
+    background: #dcb439;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+#tableCont > table th:hover {
+    background: #f4c32d;
+}
+
+#tableCont > table td {
+    width: 33%;
+    height: 20px !important;
+    min-height: 25px !important;
+    max-height: 25px !important;
+    line-height: 25px !important;
+    overflow: hidden !important;
+    border: 1px solid white;
+    padding: 3px;
+}
+
+#tableCont > table td:last-child {
+    text-align: center;
+    font-weight: bold;
+}
+
+#tableCont > table td:last-child.up {
+    color: #00d362;
+    font-size: 22px;
+}
+
+#tableCont > table td:last-child.mid {
+    color: #dcb439;
+    font-size: 18px;
+}
+
+#tableCont > table td:last-child.down {
+    color: #e8000f;
+}
+
+#tableCont > table td > span {
+    float: right;
+    margin-right: 15px;
+}

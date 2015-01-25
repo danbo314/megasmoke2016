@@ -3,61 +3,32 @@
 <head>
     <link href='http://fonts.googleapis.com/css?family=Armata|Allerta+Stencil' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../css/main.css" type="text/css"/>
-    <link rel="stylesheet" href="../fancybox/jquery.fancybox.css" type="text/css"/>
-    <link rel="stylesheet" href="../css/register.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/guest.css" type="text/css"/>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="../js/lib/mousetrap.min.js"></script>
-    <script src="../fancybox/jquery.fancybox.pack.js"></script>
     <script src="//www.parsecdn.com/js/parse-1.3.3.min.js"></script>
     <script type="text/javascript" src="../js/model.js"></script>
     <script type="text/javascript" src="../js/controller.js"></script>
-    <script src="../js/register.js"></script>
-  <script type="text/javascript">
-    function refreshGuests(filter) {
-      getRegistrations(filter, function(data) {
-        $('ul#guests').empty();
-        for (var i = 0; i< data.length; i++) {
-          $('ul#guests').append("<li>"+data[i].fullName+"</li>");
-        }
-      });
-    }
-
-    $(function () {
-	// initial load of all guests
-	refreshGuests(false);
-
-	// filter based on year
-	// TODO expand this to other fields
-	$('select.guest-filter').change( function () {
-	  refreshGuests({gradYear: $(this).val()});
-	});
-
-	// load all available graduation years
-	getAllYears(function(years) {
-	  for (var i = 0; i < years.length; i++) {
-	    $('select.guest-filter').append("<option value='"+years[i]+"'>"+years[i]+"</option>")
-	  }
-	});
-    });
-  </script>
+    <script type="text/javascript" src="../js/lib/sorttable.js"></script>
+    <script src="../js/guest.js"></script>
 </head>
 
 <body>
-    <div id="navbar">
-        <div id="center">
-            <a class="logo" href="../index.html">Megasmoke <span>2016</span></a>
-            <a class="navOp" href="register.html">Register</a>
+    <div id="container">
+        <div id="navbar">
+            <div id="center">
+                <a class="logo" href="../index.html">Megasmoke <span>2016</span></a>
+                <a class="navOp" href="register.html">Register</a>
+            </div>
         </div>
-    </div>
-    <div id="regPanel">
-        <div class="button" id="toggleShow">Hide Guests</div>
-        <div id="regContent">
-	  <select class="guest-filter">
-	    <option value="">All Years</option>
-	  </select>
-	  <ul id="guests">
-	  </ul>
+        <div id="guestTable">
+            <div id="yearTabs"><span class="tab green selected">All</span></div>
+            <div id="tableCont">
+                <table class="sortable">
+                    <tr class="headers" title="Click Header to Sort Column"><th>Name</th><th>Nickname</th><th>Commitment</th></tr>
+                </table>
+            </div>
         </div>
     </div>
 </body>
