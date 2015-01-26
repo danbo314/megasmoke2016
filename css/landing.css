@@ -144,10 +144,12 @@ div.landing h2 {
     margin-right: auto;
 }
 
+.special-button {
+  margin-top:30px;
+}
 #register {
     background: #002b5b;
     color: #dcb439;
-    margin-top: 50px;
 }
 
 #register:hover {
@@ -158,7 +160,6 @@ div.landing h2 {
 #guestList {
     background: #009b48;
     color: #dcb439;
-    margin-top: 50px;
 }
 
 #guestList:hover {

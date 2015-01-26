@@ -10,6 +10,7 @@
     color: white;
     padding: 40px 20px 0 20px;
     border-radius: 10px;
+    text-align: center;
 }
 
 .h1 {
@@ -56,7 +57,7 @@
     color: white;
 }
 
-.registration-info {
+.registration-info, .suggestion-info {
   padding: 25px 0 50px 0;
 }
 
@@ -104,15 +105,23 @@ form {
     text-align: center;
 }
 
-form > input[type=text] {
-    width: 200px;
-    height: 20px;
+form > input, form > textarea, form > select {
+    width:200px;
     margin: 10px auto 10px auto;
     border-radius: 3px;
     border: 1px solid grey;
     font-family: 'Armata', sans-serif;
     font-size: 14px;
     padding: 5px;
+}
+
+form > select {
+  height: 30px;
+  width: 212px;
+}
+
+form > input[type=text] {
+    height: 20px;
 }
 
 form > input[type=text].error, form > input[type=text].error:hover {

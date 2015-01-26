@@ -73,6 +73,43 @@ function validateAndRegister() {
     }
 }
 
+// submit suggestion
+function validateAndSubmit() {
+  var suggestionForm = $('form[name="suggestion"]');
+  var name = suggestionForm.find('input[name="nickName"]').val();
+  var type = suggestionForm.find('select[name="type"]').val();
+  var suggestion = suggestionForm.find('textarea[name="suggestion"]').val();
+  submitSuggestion(name, type, suggestion);
+}
+function clearSuggestion() {
+  var suggestionForm = $('form[name="suggestion"]');
+  suggestionForm[0].reset();
+}
+
+function submitSuggestion(name, type, suggestionText) {
+  var suggestion = new Suggestion();
+  suggestion.save({
+	name: name,
+	type: type,
+	suggestion: suggestionText
+  }, {
+    success: function(suggestion) {
+	clearSuggestion();
+        $('div.button#toggleShow').click();
+        $("#regSuccess").show();
+        setTimeout(function() {
+            $("#regSuccess").fadeOut();
+        }, 6000);
+    },
+    error: function(suggestion, error) {
+        alert('sorry could not save your information: ' + error.message);
+    }
+  });
+}
+
+
+  
+
 function submitRegistration() {
   var participant = new Participant();
 
