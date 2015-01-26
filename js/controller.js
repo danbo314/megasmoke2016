@@ -75,15 +75,32 @@ function validateAndRegister() {
 
 // submit suggestion
 function validateAndSubmit() {
-  var suggestionForm = $('form[name="suggestion"]');
-  var name = suggestionForm.find('input[name="nickName"]').val();
-  var type = suggestionForm.find('select[name="type"]').val();
-  var suggestion = suggestionForm.find('textarea[name="suggestion"]').val();
-  submitSuggestion(name, type, suggestion);
+  var suggestionForm = $('form[name="suggestion"]'),
+      name = suggestionForm.find('input[name="nickName"]').val(),
+      type = suggestionForm.find('select[name="type"]').val(),
+      suggestion = suggestionForm.find('textarea[name="suggestion"]').val(),
+      error = false;
+
+    if(name.length === 0) {
+        error = true;
+        suggestionForm.find('input[name="nickName"]').addClass("error");
+    }
+
+    if(suggestion.length === 0) {
+        error = true;
+        suggestionForm.find('textarea[name="suggestion"]').addClass("error");
+    }
+
+    if(!error) {
+        submitSuggestion(name, type, suggestion);
+    }
+    else {
+        $submitError.show();
+    }
 }
 function clearSuggestion() {
-  var suggestionForm = $('form[name="suggestion"]');
-  suggestionForm[0].reset();
+    var suggestionForm = $('form[name="suggestion"]');
+    suggestionForm[0].reset();
 }
 
 function submitSuggestion(name, type, suggestionText) {
@@ -94,7 +111,7 @@ function submitSuggestion(name, type, suggestionText) {
 	suggestion: suggestionText
   }, {
     success: function(suggestion) {
-	clearSuggestion();
+	   clearSuggestion();
         $('div.button#toggleShow').click();
         $("#regSuccess").show();
         setTimeout(function() {
@@ -106,9 +123,6 @@ function submitSuggestion(name, type, suggestionText) {
     }
   });
 }
-
-
-  
 
 function submitRegistration() {
   var participant = new Participant();

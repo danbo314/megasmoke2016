@@ -17,7 +17,11 @@
 
 #guestTable > #yearTabs {
     height: 40px;
+    position: relative;
+    overflow-y: hidden;
     overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
 }
 
 #yearTabs > .tab {
@@ -56,6 +60,10 @@
     background: white;
     color: #dcb439;
     opacity: 1;
+}
+
+#yearTabs > .tab#all {
+    margin-right: -4px;
 }
 
 #guestTable > #tableCont {

@@ -5,10 +5,10 @@ $(function () {
     });
 
     Mousetrap.bind(['enter', 'return'], function() {
-        validateAndRegister();
+        validateAndSubmit();
     });
 
-    $('#wrapper').tubular({ videoId: 'NQFyzCmrXis' });
+    $('#wrapper').tubular({ videoId: "NQFyzCmrXis"/*'326AdM2SfAU'*/ });
 
     $("#play").click(function () {
         $(this).hide();
@@ -67,14 +67,14 @@ $(function () {
 
                 left = $("#regPanel").offset().left;
 
-                $("#regPanel").css({ left: left+"px", right: "auto", margin: "auto" }).animate({ left: 0 });
+                $("#regPanel").css({ left: left+"px", right: "auto", height: "0px" }).animate({ left: 0 });
             });
 
             panelVisible = false;
         }
         else {
             $("#regPanel").animate({ width: "400px", left: left+"px" }, function() {
-                $(this).css({ left: 0, right: 0, margin: "0 auto 0 auto" });
+                $(this).css({ left: "auto", right: "2%" });
                 $(this).animate({ height: height+"px" });
                 $("#toggleShow").css({ background: "#dcb439", width: "150px", height: "26px", padding: "5px" }).html("Hide Form");
                 $("#regContent").fadeIn();
@@ -84,41 +84,8 @@ $(function () {
         }
     });
 
-    $form.find("input[type='text']").focus(function () {
+    $('form[name="suggestion"]').find("input[type='text'], textarea").focus(function () {
         $submitError.fadeOut();
         $(this).removeClass("success error");
-    });
-
-    var keyupHandler = function(target, validFunc, $statusNode, validText, invalidText) {
-            var $self = $(target),
-                currText = $self.val();
-
-            if (currText.length > 0) {
-                if (validFunc(currText)) {
-                    $statusNode.text(validText).removeClass("invalid").addClass("valid");
-                }
-                else {
-                    $statusNode.text(invalidText).removeClass("valid").addClass("invalid");
-                }
-
-                $self.css({ "border-radius": "3px 3px 0 0" });
-                $statusNode.fadeTo("slow", 1);
-            }
-            else {
-                $statusNode.fadeTo("slow", 0);
-                $self.css({ "border-radius": "3px" });
-            }
-        };
-
-    $email.on({
-        keyup: function() {
-            keyupHandler(this, isValidEmailAddress, $emailStatus, "Valid email format", "Invalid email format");
-        }
-    });
-
-    $gradYear.on({
-        keyup: function() {
-            keyupHandler(this, checkGradYear, $gradYearStatus, "Grad year is valid", "Grad Year is out of bounds");
-        }
     });
 });

@@ -3,7 +3,7 @@
 <head>
     <link href='http://fonts.googleapis.com/css?family=Armata|Allerta+Stencil' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../css/main.css" type="text/css"/>
-    <link rel="stylesheet" href="../css/register.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/suggestion.css" type="text/css"/>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="../js/lib/mousetrap.min.js"></script>
@@ -11,7 +11,7 @@
     <script type="text/javascript" src="../js/model.js"></script>
     <script type="text/javascript" src="../js/controller.js"></script>
     <script src="../js/lib/jquery.tubular.1.0.js"></script>
-    <script src="../js/register.js"></script>
+    <script src="../js/suggestion.js"></script>
 </head>
 
 <body>
@@ -30,17 +30,17 @@
         </div>
         <img src="../img/play.svg" id="play" class="control tubular-play"/>
         <img src="../img/pause.svg" id="pause" class="control tubular-pause"/>
-        <img src="../img/sound-on.svg" id="mute" class="control tubular-mute"/>
+        <img src="../img/sound-off.svg" id="mute" class="control tubular-mute"/>
         <div id="regPanel">
             <div class="button" id="toggleShow">Hide Form</div>
             <div id="regContent">
                 <form class="suggestion-info" name="suggestion" action="javascript:validateAndSubmit();" autocomplete="off">
                     <input type="text" name="nickName" placeholder="Your Name"/><br />
-	<select name="type">
-	  <option value="song">Song Request</option>
-	  <option value="other">Other</option>
-	</select>
-                    <textarea rows="4" cols="30" name="suggestion" placeholder="Suggestion" /></textarea><br />
+                    <select name="type">
+                      <option value="song">Song Request</option>
+                      <option value="other">Other</option>
+                    </select>
+                    <textarea rows="4" cols="30" name="suggestion" placeholder="Suggestion"></textarea><br />
                     <input class="button" type="submit" value="Submit" />
                     <div id="submitError">Not all fields were filled in properly.</div>
                 </form>

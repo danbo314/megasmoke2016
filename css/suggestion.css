@@ -1,0 +1,196 @@
+#regSuccess {
+    display: none;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    height: 200px;
+    width: 500px;
+    background: rgba(0,151,68,.9);
+    z-index: 999;
+    color: white;
+    padding: 40px 20px 0 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.h1 {
+    font-size: 32px;
+    margin: 0 0 20px 0;
+    font-family: 'Allerta Stencil', sans-serif;
+    text-align: center;
+}
+
+.h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.control {
+    position: fixed;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+#play {
+    display: none;
+    top: 185px;
+}
+
+#pause {
+    top: 185px;
+}
+
+#mute {
+    top: 245px;
+}
+
+#regPanel {
+    position: fixed;
+    right: .5%;
+    top: 120px;
+    width: 400px;
+    color: white;
+}
+
+.registration-info, .suggestion-info {
+  padding: 25px 0 50px 0;
+}
+
+#toggleShow {
+    background: #dcb439;
+    color: #002b5b;
+}
+
+#toggleShow > img {
+    position: absolute;
+    left: 5px;
+}
+
+#toggleShow:hover {
+    background: #002b5b !important;
+    color: #dcb439;
+}
+
+#toggleShow > img {
+    width: 50px;
+    height: 50px;
+}
+
+::-webkit-input-placeholder {
+    font-family: 'Armata', sans-serif;
+    text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    font-family: 'Armata', sans-serif;
+    text-align: center;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    font-family: 'Armata', sans-serif;
+    text-align: center;
+}
+
+:-ms-input-placeholder {
+    font-family: 'Armata', sans-serif;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+form > input, form > textarea, form > select {
+    width:200px;
+    margin: 10px auto 10px auto;
+    border-radius: 3px;
+    border: 1px solid grey;
+    font-family: 'Armata', sans-serif;
+    font-size: 14px;
+    padding: 5px;
+}
+
+form > select {
+  height: 30px;
+  width: 212px;
+}
+
+form > input[type=text] {
+    height: 20px;
+}
+
+form > input[type=text].error, form > textarea.error, form > textarea.error:hover, form > input[type=text].error:hover {
+    border-color: #e8000f;
+}
+
+form > input[type=text].success, form > input[type=text].success:hover {
+    border-color: #00d362;
+}
+
+form > input[type=text]:hover, form > textarea:hover {
+    border-color: #07bcde;
+}
+
+form > input[type=text]:focus {
+    outline: none;
+}
+
+form > label {
+    display: block;
+    margin: 10px auto 0 auto;
+}
+
+form > input[type=range] {
+    margin: 0 auto 10px auto;
+}
+
+form > .button {
+    background: #009b48;
+    color: #002b5b;
+    border: none;
+    outline: none;
+    margin: 10px auto 0 auto;
+}
+
+form > .button:hover {
+    background: #002b5b;
+    color: #009b48;
+}
+
+form > span {
+    display: inline-block;
+    width: 25px;
+    text-align: center;
+}
+
+.status {
+    width: 212px;
+    height: 15px;
+    line-height: 15px;
+    margin: -11px auto 0 auto;
+    border-radius: 0 0 3px 3px;
+    font-size: 12px;
+    opacity: 0;
+    color: white;
+}
+
+.status.valid {
+    background: #00d362;
+}
+
+.status.invalid {
+    background: #e8000f;
+}
+
+#submitError {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 5px 0 5px 0;
+    background: #e8000f;
+    color: white;
+    display: none;
+}
