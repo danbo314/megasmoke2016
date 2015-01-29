@@ -15,8 +15,8 @@
     margin: 150px auto 40px auto;
 }
 
-#guestTable > #yarTabs.windows {
-    height: 55px;
+#guestTable > .windows {
+    height: 55px !important;
 }
 
 #guestTable > #yearTabs {

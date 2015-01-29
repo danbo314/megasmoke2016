@@ -32,10 +32,6 @@ $(function() {
             $yt.append("<span class='tab "+cc+"'>"+years[i]+"</span>");
         }
 
-        console.log(isWindows);
-        console.log($yt[0].scrollWidth);
-        console.log($yt.innerWidth());
-
         if (isWindows && ($yt[0].scrollWidth > $yt.innerWidth())) {
             $yt.addClass("windows");
         }
