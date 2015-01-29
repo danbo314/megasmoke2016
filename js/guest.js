@@ -1,5 +1,7 @@
 $(function() {
 
+    var isWindows = (navigator.appVersion.indexOf("Win")!=-1);
+
     Mousetrap.bind('ctrl+alt+h+o+f', function() {
         $("body").css({ cursor: "url('../img/hoff.cur'), auto" });
     });
@@ -22,11 +24,16 @@ $(function() {
         var i,
             ylen = years.length,
             $currTab,
-            cc = "green";
+            cc = "green",
+            $yt = $("#yearTabs");
 
         for (i = 0; i < ylen; i++) {
             cc = (cc === "green") ? "blue" : "green";
-            $('#yearTabs').append("<span class='tab "+cc+"'>"+years[i]+"</span>");
+            $yt.append("<span class='tab "+cc+"'>"+years[i]+"</span>");
+        }
+
+        if (isWindows && $yt[0].scrollWidth > $yt.innerWidth) {
+            $yt.addClass("windows");
         }
 
         var filter;

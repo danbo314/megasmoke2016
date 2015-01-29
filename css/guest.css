@@ -15,8 +15,12 @@
     margin: 150px auto 40px auto;
 }
 
+#guestTable > #yarTabs.windows {
+    height: 55px;
+}
+
 #guestTable > #yearTabs {
-    height: 60px;
+    height: 40px;
     position: relative;
     overflow-y: hidden;
     overflow-x: auto;
