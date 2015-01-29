@@ -52,7 +52,7 @@ $(function() {
 
 function refreshGuests(filter) {
     getRegistrations(filter, function(data) {
-        var $table = $('#tableCont > table'),
+        var $table = $('#tableCont > table > tbody'),
             i,
             dlen = data.length,
             attClass,

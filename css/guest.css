@@ -21,6 +21,8 @@
 
 #guestTable > #yearTabs {
     height: 40px;
+    margin-bottom: -1px;
+    z-index: 99;
     position: relative;
     overflow-y: hidden;
     overflow-x: auto;
@@ -72,12 +74,26 @@
 
 #guestTable > #tableCont {
     overflow-y: auto;
+    overflow-x: hidden;
     background: white;
 }
 
 #tableCont > table  {
     width: 100%;
     border-top: 1px solid white;
+    position: relative;
+}
+
+#tableCont > table > thead{
+    position: fixed;
+    border-top: 2px solid white;
+}
+
+#tableCont > table > tbody:before {
+    line-height:1.5em;
+    content:"-";
+    color:white; /* to hide text */
+    display:block;
 }
 
 #tableCont > table tr:nth-child(even) {
@@ -94,6 +110,11 @@
     background: #dcb439;
     border: 1px solid white;
     cursor: pointer;
+    width: 265px;
+}
+
+#tableCont > table th:nth-child(2) {
+    width: 266px;
 }
 
 #tableCont > table th:hover {
