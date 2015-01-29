@@ -117,7 +117,11 @@ sorttable = {
             this.appendChild(sortfwdind);
             return;
           }
-
+          /*
+            EDIT: 1/29/15 Dan Bolivar - descending order if numeric
+          */
+          var descend = (this.className === "sorttable_numeric");
+          
           // remove sorttable_sorted classes
           theadrow = this.parentNode;
           forEach(theadrow.childNodes, function(cell) {
@@ -151,6 +155,12 @@ sorttable = {
 	        //sorttable.shaker_sort(row_array, this.sorttable_sortfunction);
 	        /* and comment out this one */
 	        row_array.sort(this.sorttable_sortfunction);
+          /*
+            EDIT: 1/29/15 Dan Bolivar - descending order if numeric
+          */
+          if (descend) {
+            row_array.reverse();
+          }
 
 	        tb = this.sorttable_tbody;
 	        for (var j=0; j<row_array.length; j++) {
