@@ -33,6 +33,14 @@ div.landing h1 {
     text-transform: uppercase;
 }
 
+div.landing h1 > a {
+    color: white;
+}
+
+div.landing h1 > a:visited {
+    color: white;
+}
+
 div.landing h2 {
   font-size: 20px;
   width: 230px;
