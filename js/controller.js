@@ -5,6 +5,7 @@ var $form,
     $gradYear,
     $attendance,
     $numPeople,
+    $numChildren,
     $emailStatus,
     $gradYearStatus,
     $submitError,
@@ -18,6 +19,7 @@ $(function () {
     $gradYear = $form.find('input[name="gradYear"]');
     $attendance = $form.find('input[name="attendance"]');
     $numPeople = $form.find('input[name="members"]');
+    $numChildren = $form.find('input[name="children"]');
     $emailStatus = $("#emailStatus");
     $gradYearStatus = $("#gradYearStatus");
     $submitError = $("#submitError");
@@ -134,6 +136,7 @@ function submitRegistration() {
       gradYear: parseInt($gradYear.val()),
       attending: parseInt($attendance.val()),
       numPeople: parseInt($numPeople.val()),
+      numChildren: parseInt($numChildren.val()),
   }, {
     success: function(participant) {
         $form[0].reset();
