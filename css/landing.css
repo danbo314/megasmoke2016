@@ -178,11 +178,12 @@ div.landing h2 {
 
 #fourBG {
     overflow: hidden;
-    height: 680px !important;
+    height: 880px !important;
 }
 
 #contact {
     width: 920px;
+    height: 800px;
     position:absolute;
     left:0;
     right:0;
@@ -261,6 +262,14 @@ div.landing h2 {
 
 #erich > .coverPhoto > .blurImg {
     margin-left: -120px;
+}
+
+#mk > .coverPhoto > .normImg {
+    top: -360px;
+}
+
+#mk > .coverPhoto > .blurImg {
+    margin-left: -70px;
 }
 
 .profCont {
@@ -349,4 +358,8 @@ div.landing h2 {
 #panel3 > .spContent > div {
     width: 420px;
     margin: 0 auto 0 auto;
+}
+
+#mk {
+    margin-left: 235px;
 }
