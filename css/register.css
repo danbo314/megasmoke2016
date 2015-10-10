@@ -2,15 +2,22 @@
     display: none;
     margin: auto;
     position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     height: 200px;
     width: 500px;
-    background: rgba(0,151,68,.9);
+    background: rgba(0, 151, 68, .9);
     z-index: 999;
     color: white;
     padding: 40px 20px 0 20px;
     border-radius: 10px;
-    text-align: center;
+}
+
+#regContent {
+    height: 548px;
+    overflow-y: auto;
 }
 
 .h1 {
