@@ -1,0 +1,41 @@
+html {
+    background: url("../img/wahmb.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#wrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background: -webkit-linear-gradient(top, rgba(0,0,0,.4), rgba(0,0,0,.7)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(top, rgba(0,0,0,.4), rgba(0,0,0,.7)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(top, rgba(0,0,0,.4), rgba(0,0,0,.7)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom, rgba(0,0,0,.4), rgba(0,0,0,.7)); /* Standard syntax (must be last) */
+}
+
+.video h2 {
+    font-family: 'Allerta Stencil', sans-serif;
+    margin: 5px;
+    color: #cbcbcb;
+}
+
+.video {
+    padding: 10px;
+    background: rgba(0, 0, 0, .5);
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+#vidContainer {
+    width: 580px;
+    margin: 0 auto;
+    padding: 90px 0;
+    overflow-y:auto;
+    height: 85%;
+}
