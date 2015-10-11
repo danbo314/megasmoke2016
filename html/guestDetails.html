@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Armata|Allerta+Stencil' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../css/main.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/guestDetails.css" type="text/css"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="../js/lib/mousetrap.min.js"></script>
+    <script src="https://www.parsecdn.com/js/parse-1.3.3.min.js"></script>
+    <script type="text/javascript" src="../js/model.js"></script>
+    <script type="text/javascript" src="../js/controller.js"></script>
+    <script type="text/javascript" src="../js/lib/sorttable.js"></script>
+    <script src="../js/guestDetails.js"></script>
+</head>
+
+<body>
+    <div id="detailSummary">
+        <div class="detailRow">
+            <span class="label">Total Responses</span><span id="total" class="number"></span>
+            <span class="label">Coming</span><span id="yes" class="number"></span>
+            <span class="label">Maybe</span><span id="maybe" class="number"></span>
+            <span class="label">No</span><span id="no" class="number"></span>
+        </div>
+        <div class="detailRow">
+            <span class="label">Adults</span><span id="adults" class="number"></span>
+            <span class="label">Children</span><span id="children" class="number"></span>
+        </div>
+    </div>
+    <table class="sortable">
+        <thead><tr class="headers" title="Click Header to Sort Column"><th>Name</th><th>Nickname</th><th class="sorttable_numeric">Commitment</th><th class="sorttable_numeric">Adults</th><th class="sorttable_numeric">Children</th></tr></thead>
+        <tbody></tbody>
+    </table>
+</body>
