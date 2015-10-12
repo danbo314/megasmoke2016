@@ -13,7 +13,15 @@ $(function () {
             no = 0,
             maybe = 0,
             ppl,
-            kids;
+            kids,
+            date,
+            dateKey,
+            dateStr,
+            day,
+            month,
+            hour,
+            minute,
+            seconds;
 
         $table.find("tr:not(.headers)").remove();
 
@@ -38,7 +46,15 @@ $(function () {
             }
 
             gy = "<span>'"+data[i].gradYear.toString().substring(2)+"</span>";
-            $table.append("<tr><td>"+data[i].fullName+gy+"</td><td>"+data[i].nickName+"</td><td class='"+attClass+"'>"+data[i].attending+"</td><td>"+data[i].numPeople+"</td><td>"+data[i].numChildren+"</td></tr>");
+            date = new Date(data[i].createdAt);
+            month = parseTimeStr(date.getMonth()+1);
+            day = parseTimeStr(date.getDate());
+            hour = parseTimeStr(date.getHours());
+            minute = parseTimeStr(date.getMinutes());
+            seconds = parseTimeStr(date.getSeconds());
+            dateKey = ""+date.getFullYear()+month+day+hour+minute+seconds;
+            dateStr = date.toDateString();
+            $table.append("<tr><td>"+data[i].fullName+gy+"</td><td>"+data[i].nickName+"</td><td class='"+attClass+"'>"+data[i].attending+"</td><td>"+data[i].numPeople+"</td><td>"+data[i].numChildren+"</td><td sorttable_customkey='"+dateKey+"'>"+dateStr+"</td></tr>");
         }
 
         $("#total").html(dlen);
@@ -54,3 +70,7 @@ $(function () {
         $("#children").html(kids);
     });
 });
+
+function parseTimeStr (time) {
+    return time < 10 ? "0"+time : time;
+}
