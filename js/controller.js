@@ -175,6 +175,7 @@ function getRegistrations(filter, callback) {
             query.equalTo('gradYear', parseInt(filter.gradYear));
         }
     }
+    query.limit(1000);
     query.addAscending("gradYear");
     query.find({
         success: function(results) {
@@ -183,6 +184,7 @@ function getRegistrations(filter, callback) {
             for (var i = 0; i < results.length; i++) {
                 returnArray.push(results[i].toJSON());
             }
+
             callback(returnArray);
         },
         error: function(error) {
